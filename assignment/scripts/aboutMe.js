@@ -83,6 +83,12 @@ if (pets > allowedPets) {console.log( 'I have too many pets!');
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
+let mostPets;
+if (pets > friendsPets) {console.log('mostPets:', + pets);
+    
+} else {console.log('mostPets:', + friendsPets);
+    
+}
 
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
