@@ -7,7 +7,7 @@ let lastName = 'Jama'
 console.log( lastName );;
 // 3 - Create a third variable called `fullName`, assign it the value of your first and last name
 // (remember, you already have variables for this, can you use those?)
-let fullName = firstName + '' + lastName ;
+const fullName = firstName + ' ' + lastName ;
 // 4 - Console log the value of `fullName`
 console.log( fullName );
 // 5 - Create a variable called `luckyNumber` and assign it the value of your lucky number.
@@ -32,9 +32,9 @@ console.log( friendsPets );
 pets+=2;
 console.log( 'Pets:', pets);
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
-let allowedPets = 2;
+const allowedPets = 2;
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!", 
-if (adventurous === true) {console.log( 'Adventures are great!'); //end adventures are great    
+if (adventurous === true) {console.log( 'Adventures are great!'); 
 } else { console.log('Adventures are not great');}
 
 // if it's not true, console log "How about we stay home?"
@@ -44,37 +44,15 @@ if ( adventurous != true ) { console.log( 'How about we stay home?');}
 if ( luckyNumber === 2 && adventurous === true) { console.log( 'Roll the dice! ');}
 // 15 - Write a conditional that console logs "I can have more pets!" 
 //if the value of `pets` is less than the value of `allowedPets`,
-if (pets < allowedPets) {console.log('I can have more pets!');
-    
-} else {console.log( 'I am not allowed more pets :(');
-    
-}
 // console logs "I have enough pets" if the value of `pets` is equal to the value of `allowedPets`,
-if (pets === allowedPets) {console.log('I have enough `pets`');
-    
-} else {console.log( 'I may or may not be allowed more pets.');
-    
-}
 // and console logs "Oh no, I have too many pets!"
 // if the value of `pets` is greater than the value of `allowedPets`.
-if (pets > allowedPets) {console.log( 'I have too many pets!');
-    
-} else {console.log( 'I am not allowed more pets:(');
-    
-}
-
-if (pets < allowedPets) {console.log('I can have more pets!');
-if (pets === allowedPets) {console.log('I have enough `pets`');
-if (pets > allowedPets) {console.log( 'I have too many pets!');
-            
-        } else {console.log( 'I have enough pets!');
-            
-        }
-    } else {console.log( 'I may or may not be allowed more pets.');
-        
-    }
-} else {console.log( 'I am not allowed more pets:(');
-    
+if (pets<allowedPets) {
+    console.log('I can have more pets!');
+} else if (pets===allowedPets) {
+    console.log('I have enough pets.');
+} else {
+    console.log('I have too many pets!');
 }
 
 // STRETCH GOALS:
@@ -84,11 +62,14 @@ if (pets > allowedPets) {console.log( 'I have too many pets!');
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
+
 let mostPets;
-if (pets > friendsPets) {console.log('mostPets:', + pets);
-    
-} else {console.log('mostPets:', + friendsPets);
-    
+if (pets>friendsPets) {
+    console.log('mostPets:', + pets);
+} else if (pets<friendsPets) {
+    console.log('mostPets:', + friendsPets);
+} else{
+    console.log('We both have the same number of pets.');
 }
 
 // 17 - Write a *switch* statement that logs:
@@ -103,6 +84,7 @@ switch (luckyNumber) {
         break;
     case 2: 
         console.log('Second is the best');
+        break;
     case 3: 
         console.log('Third is the one with the polka dot dress');
         break;
